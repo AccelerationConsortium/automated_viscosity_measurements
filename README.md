@@ -1,4 +1,5 @@
-# Download any version on python64 bit and 32 bit and install (pip) in both
+# Download any version of python64 bit and 32 bit and install (pip) the folliwing in both
+
 pyserial
 pyyaml
 numpy
