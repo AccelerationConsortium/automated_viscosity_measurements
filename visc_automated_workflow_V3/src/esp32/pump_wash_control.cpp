@@ -1,5 +1,5 @@
-/*
-// Commented cause of IDE compatability, USE Arduino IDE for running, testing and uploading the code.
+
+// USE Arduino IDE for running, testing and uploading the code.
 
 #include <Arduino.h>
 // Driver 1 (Pump 1, Pump 2)
@@ -175,4 +175,4 @@ void stopAll() {
   
   Serial.println("All Motors STOPPED");
 }
-  */
+
