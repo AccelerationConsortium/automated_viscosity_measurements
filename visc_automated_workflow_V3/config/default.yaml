@@ -1,0 +1,18 @@
+# Default configuration for automated viscosity measurements
+python32: ".\\.venv32\\Scripts\\python.exe"
+visco_port: "COM6"
+visco_baud: 115200
+visco_timeout: 1.0
+spindle_k: 992.47
+analysis_mode: "single" # "single" | "dynamic" | "bisection"
+sample_rack: "main_rack_A"
+sample_range: [0]
+enable_wash: false
+esp32_port: "COM4"
+esp32_baud: 9600
+pump_virtual: true
+pause_after_home: 0.2
+pause_after_move: 0.1
+cnc_port: "COM5"
+cnc_baud: 115200
+location_file: "config/locations.yaml"
