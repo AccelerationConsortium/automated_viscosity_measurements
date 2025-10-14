@@ -19,7 +19,7 @@ def wash2(cnc, pump: PumpESP32):
     print("[WASH2] start")
     pump.send_tag(b"2")
     time.sleep(WASH2_WAIT)
-
+    
 
 def wash3(cnc, pump: PumpESP32):
     go_to_wash_station(cnc, station_idx=2, safe=True)
