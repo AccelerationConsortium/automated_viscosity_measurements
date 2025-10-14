@@ -1,6 +1,5 @@
-"""
-Runner entrypoint: load config, wire up hardware, motion, and analysis.
-"""
+# Runner entrypoint: load config, wire up hardware, motion, and analysis.
+
 import pathlib, yaml, time, sys
 # Add project `src` directory to Python path
 ROOT = pathlib.Path(__file__).resolve().parents[2]
