@@ -1,7 +1,0 @@
-t_elapsed_s,rpm,torque_percent,torque_valid,temperature_c,temp_valid,viscosity_cp,status,record
-10.0,5.1,137.74,False,,False,,0,0
-20.05,5.1,137.74,False,,False,,0,0
-30.03,5.1,137.74,False,,False,,0,0
-40.05,5.1,137.74,False,,False,,0,0
-50.05,5.1,137.74,False,,False,,0,0
-60.0,5.1,137.74,False,,False,,0,0

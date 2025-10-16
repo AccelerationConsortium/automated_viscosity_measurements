@@ -14,8 +14,13 @@ VISCO_TOUT  = 1.0
 SPINDLE_K   = 992.47
 ANALYSIS_MODE = "single"  # "single" | "dynamic" | "bisection"
 SAMPLE_RACK  = "main_rack_A"
-SAMPLE_RANGE = range(0, 1)     
-# Wash / Pump settings # ENABLE_WASH  = False # ESP32_PORT = "COM4"  #ESP32_BAUD = 9600#PUMP_VIRTUAL = True             
+SAMPLE_RANGE = range(0, 1)  
+
+# Wash / Pump settings 
+ENABLE_WASH  = False 
+ESP32_PORT = "COM4"  
+ESP32_BAUD = 9600
+PUMP_VIRTUAL = True             
 PAUSE_AFTER_HOME = 0.2
 PAUSE_AFTER_MOVE = 0.1
 
@@ -38,10 +43,11 @@ def main():
     cnc = CNC_Machine(virtual=False)
     cnc.home()
     time.sleep(PAUSE_AFTER_HOME)
-    #pump = None
-    #if ENABLE_WASH:
-     #   pump = PumpESP32(port=ESP32_PORT, baud=ESP32_BAUD, virtual=PUMP_VIRTUAL)
-      #  pump.open()
+
+    pump = None
+    if ENABLE_WASH:
+        pump = PumpESP32(port=ESP32_PORT, baud=ESP32_BAUD, virtual=PUMP_VIRTUAL)
+        pump.open()
 
     client = ViscometerClient(PYTHON32, worker)
     try:
@@ -65,8 +71,11 @@ def main():
             print(f"[sample {i}] results -> {csv_path}")
 
             #wash sequence between samples 
-           # if ENABLE_WASH and pump is not None:
-            #  wash1(cnc, pump)# wash2(cnc, pump) # wash3(cnc, pump)
+            if ENABLE_WASH and pump is not None:
+              wash1(cnc, pump)
+              wash2(cnc, pump) 
+              wash3(cnc, pump) 
+
         cnc.home()
 
     finally:
@@ -76,11 +85,11 @@ def main():
             pass
         client.close()
         # Close pump if used
-       # if pump is not None:
-       #     try:
-       #         pump.close()
-        #    except Exception:
-       #         pass
+        if pump is not None:
+            try:
+                pump.close()
+            except Exception:
+                pass
 
 if __name__ == "__main__":
     main()
