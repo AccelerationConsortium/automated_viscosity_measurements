@@ -2,6 +2,49 @@
 
 An integrated robotic system for automated viscosity measurements using a Brookfield DVT viscometer, CNC machine, and automated washing stations. This system eliminates manual intervention in viscosity testing workflows, reduces contamination, and enables high-throughput rheological analysis.
 
+## Table of Contents
+
+- [Problem Statement](#problem-statement)
+- [Solution Overview](#solution-overview)
+- [System Architecture](#system-architecture)
+- [Hardware Components](#hardware-components)
+  - [PCB Design and Motor Control](#pcb-design-and-motor-control)
+    - [Motor Driver Configuration](#motor-driver-configuration)
+    - [Pump Control Specifications](#pump-control-specifications)
+  - [Component List](#component-list)
+- [Project Structure](#project-structure)
+- [Installation and Setup](#installation-and-setup)
+  - [Prerequisites](#prerequisites)
+  - [Python Dependencies](#python-dependencies)
+  - [Virtual Environment Setup](#virtual-environment-setup)
+    - [64-bit Environment (Primary)](#64-bit-environment-primary)
+    - [32-bit Environment (Viscometer Communication)](#32-bit-environment-viscometer-communication)
+  - [ESP32 Firmware](#esp32-firmware)
+- [System Operation](#system-operation)
+  - [Washing Process](#washing-process)
+  - [Movement and Positioning](#movement-and-positioning)
+- [Analysis Methods](#analysis-methods)
+  - [1. Single-Point Analysis](#1-single-point-analysis)
+  - [2. Dynamic Analysis](#2-dynamic-analysis)
+  - [3. Bisection Analysis](#3-bisection-analysis)
+    - [Bisection Algorithm](#bisection-algorithm)
+- [Configuration](#configuration)
+  - [Main Script Configuration](#main-script-configuration)
+- [Usage](#usage)
+  - [Basic Operation](#basic-operation)
+  - [Operational Sequence](#operational-sequence)
+  - [Results](#results)
+- [Future Development](#future-development)
+  - [Code Reorganization](#code-reorganization)
+  - [Z-Height Calibration Integration](#z-height-calibration-integration)
+  - [Raspberry Pi 5 Deployment](#raspberry-pi-5-deployment)
+    - [Deployment Features](#deployment-features)
+- [Troubleshooting](#troubleshooting)
+  - [Common Issues](#common-issues)
+  - [Error Recovery](#error-recovery)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Problem Statement
 
 Traditional viscosity measurements face several critical challenges:
@@ -347,7 +390,7 @@ Please refer to the development practices in `.github/copilot-instructions.md` f
 
 ## License
 
-This project is part of the Acceleration Consortium's research initiatives. Please contact the repository maintainers for licensing information.
+This project is part of the Acceleration Consortium's research initiatives. Please contact the repository maintainers (koketso.gaborekwe@utoronto.ca) for licensing information.
 
 ---
 
